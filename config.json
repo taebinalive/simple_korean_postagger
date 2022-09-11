@@ -1,0 +1,36 @@
+{
+  "tokenizer_path": "./tokenizer/vocab.json",
+  "dic_path": "./dic",
+  "data_path": "./aligned_small",
+  "file_suffix": "aligned",
+  "checkpoint_path": "./checkpoint",
+
+  "model_type": "CNN",
+
+  "epoch": 150,
+  "emb_dim": 100,
+  "hidden_dim": 600,
+  "clip": 1.0,
+  "layer_norm_epsilon": 1e-5,
+  "label_smoothing": 0.1,
+  "lr": 1e-3,
+  "dropout": 0.1,
+  "max_seq_len": 256,
+  "batch_size": 256,
+  "early_stop": 10,
+
+  "BiLSTM": {
+    "rnn_base": "LSTM",
+    "num_layers": 4
+  },
+  "BiLSTMLAN": {
+    "rnn_base": "LSTM",
+    "num_heads": 4,
+    "num_layers": 5
+  },
+  "CNN": {
+    "num_layers": 1,
+    "window_size": 5,
+    "max_kernel_size": 6
+  }
+}
